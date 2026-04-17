@@ -1,6 +1,10 @@
 const express = require("express");
 const app = express();
 
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to CI/CD Node App" });
+});
+
 app.get("/health", (req, res) => {
   res.json({ status: "OK" });
 });
